@@ -1,1 +1,4 @@
 .idea/
+src/.ipynb_checkpoints/
+src/derby.log
+src/metastore_db/
