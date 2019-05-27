@@ -4,3 +4,7 @@ Trabajo Practico Final de la materia Introducción a los sistemas inteligentes, 
 ## Docs
 
 Ver [Informe](doc/report.pdf)  
+
+## Analisis
+
+Ver [Analisis](src/analisis.ipynb)  
