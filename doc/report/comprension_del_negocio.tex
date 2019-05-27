@@ -13,20 +13,118 @@
     no, y en qué nivel influye cada una de ellas. Se considerará que los videos
     del canal de youtube si los mismos obtienen un porcentaje de X likes y más
     de 2 millones de vistas por video.
+
 \subsection{Evaluación de la situación}
     \subsubsection{Inventario de recursos}
+    Para desarrollar el presente proyecto se cuenta con una amplia gama de recursos que
+    asegura un desarrollo de calidad y confianza del mismo.
+    Se cuenta con un set de datos extraído de la pagina de kaggle sobre videos
+    de youtube que fueron subidos a la plataforma. Además se cuenta con
+    herramientas de software de análisis y visualización de datos líderes
+    en el mercado, como Pandas. Por último, se cuenta con personal
+    altamente calificado para la correcta interpretación de los mismos.
+
     \subsubsection{Requisitos, supuestos y restricciones}
         \paragraph{Requisitos}
+        Contar con datos suficientes y sobre todo representativos de la
+        plataforma youtube
         \paragraph{Supuestos}
+        Los datos en estudio son lo suficientemente correctos como para poder
+        sacar conclusiones confiables a partir de ellos.
         \paragraph{Restricciones}
+        Se cuenta solamente con datos de videos subidos a youtube
+        Estados Unidos. No se asegura que los resultados sean válidos para
+        otros países.
+
     \subsubsection{Riesgos y contingencias}
+
+        Si bien se puede llevar a cabo un análisis lo más riguroso posible, siempre existe la
+        posibilidad de que un video pueda no ser exitoso porque hay que tener en
+        cuenta que el exito de cada video puede depender de muchos factores de
+        incertidumbre, y si bien se cumplen patrones, no hay nada que asegure al
+        100% el éxito de los mismos.
+        En caso de detectar que un video no está teniendo el éxito esperado,
+        habrá que recurrir a las diversas métricas que pueda ofrecer Youtube a
+        desarrolladores y analizar la situación
+
     \subsubsection{Terminología}
-        \paragraph{Glosario de términos del negocio}
-        \paragraph{Glosario de términos de la minería de datos}
+
+        \paragraph{Glosario de términos del negocio\\\\}
+
+            \underline{\textbf{Youtube:}} es una plataforma que te permite subir videos a
+            partir de la creación de un canal.\\\\
+            \underline{\textbf{Canal de youtube:}} Es el equivalente a crearse una
+            cuenta en cierta aplicacion, en la cual se almacenan los videos subidos\\\\
+            \underline{\textbf{Categoría:}} define el nombre de un grupo de vides con
+            cualidades comunes.\\\\
+            \underline{\textbf{likes/dislikes:}} Es un atributo de un video que muestra la
+            cantidad de usuarios que le dieron like al video en cuestion\\\\
+            \underline{\textbf{Vistas:}} Es la cantidad de veces que el video fue
+            visto\\\\
+            \underline{\textbf{Video exitoso:}} Aquel cuya cantidad de vistas es mayor a
+            200000 y promedio de likes versus dislikes es mayor al 80 \% \\\\
+
+        \paragraph{Glosario de términos de la minería de datos\\\\}
+
+            \underline{\textbf{Atributo:}}  dato sobre alguna característica de las
+            observaciones.\\\\
+            \underline{\textbf{Atributo relevante:}} atributo que juega un papel principal
+            en la clasificación, por lo que la clase dependerá en alguna medida de
+            qué valor tenga.\\\\
+            \underline{\textbf{Registro:}} fila que representa una observación, está
+            compuesto de atributos.\\\\
+            \underline{\textbf{Dataset:}} conjunto de datos a ser utilizados para la
+            ejecución de los algoritmos de Data Mining, está compuesto de registros.\\\\
+            \underline{\textbf{Filtrado de atributos:}} específica al dataset formado
+            considerando sólo los atributos relevantes.\\\\
+            \underline{\textbf{Regla:}} es una implicación, que representa una acción
+            mediante una condición. Sigue la estructura “Si\..., entonces\...”.\\\\
+            \underline{\textbf{Soporte:}} es la relación entre la cantidad total de
+            registros del dataset que cumplen la regla y la cantidad de observaciones
+            procesadas.\\\\
+            \underline{\textbf{Confianza:}} es la relación entre la cantidad total de
+            observaciones de la clase mayoritaria que cumplen la regla y la cantidad
+            de observaciones que fueron afectadas por esa misma regla.\\\\
+            \underline{\textbf{Captura:}} es la relación entre la cantidad de
+            observaciones de la clase mayoritaria que cumplen la regla y la cantidad de
+            observaciones procesadas pertenecientes a esa misma clase.\\\\
+            \underline{\textbf{Coeficiente de correlación de Pearson:}} es la estadística
+            de prueba que mide la relación estadística, o asociación, entre dos
+            variables continuas. Es conocido como el mejor método para medir la
+            asociación entre variables de interés porque se basa en el método de
+            covarianza. Da información sobre la magnitud de la asociación, o
+            correlación, así como la dirección de la relación\\\\
+
     \subsubsection{Costos y beneficios}
+        El beneficio del proyecto es detectar las características que hacen a
+        un video de youtube sea exitoso. De esta manera se pueden tener en
+        cuenta ciertos parametros para poder desarrollar un video que exitoso
+        basandose en la historia.
+        Al ser un trabajo final educativo, no hay costos.
 \subsection{Determinar objetivos de Minería de Datos}
     \subsubsection{Objetivo de minería de datos}
+    El objetivo de minería de datos es el análisis de los datos obtenidos a
+    partir de la información disponible, buscando obtener así información
+    relevante que permita predecir las condiciones bajo las cuales una
+    aplicación es exitosa.
     \subsubsection{Criterios de éxito de minería de datos}
+    Selección de al menos 4 reglas con soporte mayor o igual al 20%.
 \subsection{Realizar el Plan del Proyecto}
     \subsubsection{Plan de proyecto}
+        \begin{itemize}
+            \item Recolección de datos: 5 horas.
+            \item Preparación de datos: 5 horas.
+            \item Ejecución del algoritmo de Inducción: 4 horas.
+            \item Análisis de resultados de algoritmo de Inducción: 4 horas.
+            \item Combinación de resultados: 3 horas.
+            \item Elaboración de reporte: 7 horas.
+        \end{itemize}
     \subsubsection{Validación inicial de las herramientas}
+        Se utilizarán las siguientes herramientas:
+        \begin{itemize}
+            \item Python
+            \item Pandas
+            \item Weka
+            \item Jupiter Notebook
+            \item Numpy
+        \end{itemize}
