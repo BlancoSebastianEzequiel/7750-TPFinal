@@ -3,6 +3,8 @@
 \usepackage[scale=1,angle=0,opacity=1,color=black!60]{background}
 \usepackage{tikzpagenodes}
 \usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{flafter}
 \usepackage{lmodern}
 \usepackage{float}
 \usepackage{adjustbox}
@@ -51,3 +53,15 @@
     title=\lstname,
 }
 \def\labelitemi{$\bullet$}
+
+% Esto lo saque de aca: https://tex.stackexchange.com/questions/60209/how-to-add-an-extra-level-of-sections-with-headings-below-subsubsection
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Esto lo saque de aca: https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
+% Better inline directory listings
+\usepackage{xcolor}
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}

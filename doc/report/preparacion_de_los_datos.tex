@@ -1,11 +1,39 @@
 \subsection{Seleccionar los datos}
     \subsubsection{Inclusión/Exclusión de datos}
+        Los datos que se terminaron utilizando fueron todos los de tipo
+        alfanumerico, numérico y discreto.
 \subsection{Limpiar los datos}
     \subsubsection{Reporte de limpieza de datos}
+        Se limpiaron los siguientes campos:
+        \begin{itemize}
+            \item video\_id
+            \item trending\_date
+            \item title
+            \item channel\_title
+            \item tags
+            \item likes
+            \item dislikes
+            \item thumbnail\_link
+            \item description
+        \end{itemize}
+        Algunos de estos campos se usaron para crear nuevos campos.
 \subsection{Estructurar los datos}
     \subsubsection{Derivación de atributos}
+        \begin{itemize}
+            \item \textbf{days\_since\_publication:} Cantidad de dias desde que se publico el video
+            \item \textbf{title\_size:} Longitud en cantidad de caracteres del atributo title
+            \item \textbf{publish\_time:} Se modifico el timestamp por un formato tal: YYYY-MM-DD
+            \item \textbf{tags\_quantity:} cantidad de tags
+            \item \textbf{likes\_ratio:} Ratio de likes y dislikes calculado como: likes/(likes+dislikes)
+            \item \textbf{has\_description:} Es verdadero si el video tiene descripcion.
+        \end{itemize}
     \subsubsection{Generación de registros}
+        Se genero el registro \code{is\_sucessfull} que fue calculado en funcion de si
+        el video tiene mas de 2 millones de viws y un ratio mayor o igual a 0.8
 \subsection{Integrar los datos}
     \subsubsection{Unificación de los datos}
+        Se unieron las datos del dataset con el json de categorias para conocer
+        la relacion entre el valor nuemrico y el nombre de la categoria.
 \subsection{Formato de los datos}
     \subsubsection{Reporte de formato de los Datos}
+        publish\_time: Se modifico el timestamp por un formato tal: YYYY-MM-DD
