@@ -4,6 +4,7 @@
 \usepackage{tikzpagenodes}
 \usepackage{lastpage}
 \usepackage{tabularx}
+\usepackage{graphicx}
 \usepackage{flafter}
 \usepackage{lmodern}
 \usepackage{float}
@@ -57,6 +58,11 @@
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subparagraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\subparagraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % Esto lo saque de aca: https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
