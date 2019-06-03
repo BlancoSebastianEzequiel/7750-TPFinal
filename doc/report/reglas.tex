@@ -1,0 +1,399 @@
+\begin{itemize}
+%-------------------------------------------------------------------------------
+% Regla 1
+%-------------------------------------------------------------------------------
+  \item Regla 1:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication <= 7
+  Entonces
+  is_successfull = false
+\end{lstlisting}
+
+  \begin{itemize}
+    \item Confianza: 0.787
+    \item Soporte: 0.144
+    \item Captura: 0.134
+  \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 2
+%-------------------------------------------------------------------------------
+
+  \item Regla 2:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id >= 10
+  Entonces
+  is_successfull = false
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.887
+      \item Soporte: 0.775
+      \item Captura: 0.816
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 3
+%-------------------------------------------------------------------------------
+  \item Regla 3:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication > 32
+  Entonces
+  is_successfull = false
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 1
+      \item Soporte: 0.003
+      \item Captura: 0.003
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 4
+%-------------------------------------------------------------------------------
+
+  \item Regla 4:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio > 0.985
+  Entonces
+  Is_successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.713
+      \item Soporte: 0.008
+      \item Captura: 0.01
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 5
+%-------------------------------------------------------------------------------
+  \item Regla 5:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication > 14
+  AND tags_quantity > 32
+  Entonces
+  is_successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.67
+      \item Soporte: 0.0021
+      \item Captura: 0.0017
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 6
+%-------------------------------------------------------------------------------
+  \item Regla 6:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication > 14
+  AND tags_quantity <= 32
+  AND title_size <= 28
+  Entonces
+  is_successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.556
+      \item Soporte: 0.003
+      \item Captura: 0.002
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 7
+%-------------------------------------------------------------------------------
+  \item Regla 7:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication > 14
+  AND tags_quantity <= 32
+  AND title_size > 28
+  Entonces
+  is_Successfull = True
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.726
+      \item Soporte: 0.019
+      \item Captura: 0.088
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 8
+%-------------------------------------------------------------------------------
+  \item Regla 8:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity > 39
+  Entonces
+  is_Successfull = False
+
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.902
+      \item Soporte: 0.0012
+      \item Captura: 0.0013
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 9
+%-------------------------------------------------------------------------------
+  \item Regla 9:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity < 39
+  AND category_id <= 2
+  AND title_size <= 28
+  Entonces
+  is_Successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.883
+      \item Soporte: 0.0023
+      \item Captura: 0.0024
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 10
+%-------------------------------------------------------------------------------
+  \item Regla 10:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity < 39 & category_id <= 2
+  AND title_size > 28
+  AND title_size <= 40
+  Entonces
+  is_Successfull = True
+
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.646
+      \item Soporte: 0.0023
+      \item Captura: 0.01
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 11
+%-------------------------------------------------------------------------------
+  \item Regla 11:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity < 39
+  AND category_id <= 2
+  AND title_size > 28
+  AND title_size >40
+  Entonces
+  is_Successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.652
+      \item Soporte: 0.0081
+      \item Captura: 0.0063
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 12
+%-------------------------------------------------------------------------------
+  \item Regla 12:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity <= 39
+  AND category_id >= 2
+  AND tags_quantity > 16
+  Entonces
+  Is_Successfull = True
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.67
+      \item Soporte: 0.01
+      \item Captura: 0.045
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 13
+%-------------------------------------------------------------------------------
+  \item Regla 13:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity <= 39
+  AND category_id >= 2
+  AND tags_quantity <= 16
+  AND tags_quantity > 12
+  Entonces
+  is_Successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.79
+      \item Soporte: 0.0022
+      \item Captura: 0.0020
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 14
+%-------------------------------------------------------------------------------
+  \item Regla 14:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity <= 39
+  AND category_id >= 2
+  AND tags_quantity <= 16
+  AND tags_quantity <= 12
+  AND title_size > 47
+  Entonces
+  is_Successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.62
+      \item Soporte: 0.0057
+      \item Captura: 0.0042
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 15
+%-------------------------------------------------------------------------------
+  \item Regla 15:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity <= 39
+  AND category_id >= 2
+  AND tags_quantity <= 16
+  AND tags_quantity <= 12
+  AND title_size <= 47
+  AND likes_ratio > 0.97556
+  Entonces
+  is_Successfull = True
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.776
+      \item Soporte: 0.0026
+      \item Captura: 0.0127
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 16
+%-------------------------------------------------------------------------------
+  \item Regla 16:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity <= 39
+  AND category_id >= 2
+  AND tags_quantity <= 16
+  AND tags_quantity <= 12
+  AND title_size <= 47
+  AND likes_ratio <= 0.97556
+  AND likes_ratio <= 0.965
+  Entonces
+  is_Successfull = True
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.622
+      \item Soporte: 0.0044
+      \item Captura: 0.017
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+% Regla 17
+%-------------------------------------------------------------------------------
+  \item Regla 17:
+
+\begin{lstlisting}[language=bash, numbers=none]
+  Si category_id <= 10
+  AND days_since_publication > 7
+  AND days_since_publication <= 32
+  AND days_since_publication <= 14
+  AND likes_ratio <= 0.985
+  AND tags_quantity <= 39
+  AND category_id >= 2
+  AND tags_quantity <= 16
+  AND tags_quantity <= 12
+  AND title_size <= 47
+  AND likes_ratio <= 0.97556
+  AND likes_ratio > 0.965
+  Entonces
+  is_Successfull = False
+\end{lstlisting}
+
+    \begin{itemize}
+      \item Confianza: 0.66
+      \item Soporte: 0.0027
+      \item Captura: 0.0021
+    \end{itemize}
+
+\end{itemize}
