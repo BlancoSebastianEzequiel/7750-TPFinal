@@ -163,8 +163,34 @@ los algoritmos.
         \paragraph{Analisis de reglas}
 
             Se detallan a continuación las reglas respaldadas por una cantidad
-            de observaciones razonable, tomando las que tengan soporte mayor o
-            igual al 20 \%.
+            de observaciones razonable:
+            \begin{itemize}
+                \item Regla 7:
+                    A partir de esta regla podemos inferir que los dias desde
+                    que se publico el video juega un papel muy importante ya que
+                    hay un rango de dias en los cuales el video se encuentra en
+                    tendencia y el mismo puede llegar a ser exitoso.
+                \item Regla 10:
+                    Como en la regla anterior los dias desde su publicacion
+                    juega un papel muy iportante pero tambien el porcentaje de
+                    likes respecto de dislikes es vital para que un video sea
+                    exitoso si hay un predominio de likes en un 98 \% aproximadamente
+                \item Regla 12:
+                    En esta regla podemos observar que tener una minima cantidad de
+                    tags es importante ya que los mismos ayudan a promocionar el
+                    mismo haciendo que las busquedas por tags facilite que el video
+                    sea visto
+                \item Regla 15:
+                    Con esta regla y las anteriores vemos que la categoria muestra
+                    una variable importante ya que videos de musica son los que logran
+                    un exito destacable respecto a otros videos.
+            \end{itemize}
 
     \subsubsection{Revisión de la configuración de parámetros}
+        Para lograr una buena construcción del árbol, se limitó la cantidad de
+        nodos hoja a 80 ya que nos da una cantidad de reglas razonable y a menos
+        cantidad nos daban reglas mas chicas y en mas cantidad.\\
+        Se probó variar la cantidad mínima de muestras requerida para hacer
+        un split, la cantidad mínima de muestras que debe haber en un nodo
+        hoja, la cantidad máxima de niveles del árbol.
 
