@@ -95,31 +95,31 @@ los algoritmos.
           \textbf{Training Time:}\\
           \textbf{Decay:}\\
 
+    \newpage
     \subsubsection{Modelos}
 
         \paragraph{Resultados de Árbol de decisión J48:}
             \subparagraph{Matriz de confusion}
 
-            \begin{figure}[ht]
-                \begin{adjustbox}{addcode={
-                    \begin{minipage}{\width}}{
-                    \end{minipage}},rotate=360,center}
-                    \includegraphics[scale=.6]{confusion_matrix.png}
-                \end{adjustbox}
-            \end{figure}
-            \FloatBarrier
+                \begin{figure}[ht]
+                    \begin{adjustbox}{addcode={
+                        \begin{minipage}{\width}}{
+                        \end{minipage}},rotate=360,center}
+                        \includegraphics[scale=.6]{confusion_matrix.png}
+                    \end{adjustbox}
+                \end{figure}
+                \FloatBarrier
 
             \subparagraph{Resultados de la clasificación}
 
-                \begin{center}
-                  \begin{tabular}{||c | c | c||}
-                    \hline
-                    Elementos clasificados correctamente & 10438 & 84.9654 \% \\ [0.5ex]
-                    \hline
-                    Instancias clasificadas en forma incorrecta & 1847 & 15.0346 \% \\
-                    \hline
-                  \end{tabular}
-                \end{center}
+                \begin{figure}[ht]
+                    \begin{adjustbox}{addcode={
+                        \begin{minipage}{\width}}{
+                        \end{minipage}},rotate=360,center}
+                        \includegraphics[scale=.6]{clasification_results.png}
+                    \end{adjustbox}
+                \end{figure}
+                \FloatBarrier
 
             \newpage
             \subparagraph{Arbol}
@@ -137,22 +137,22 @@ los algoritmos.
             \FloatBarrier
             \newpage
 
-        \subparagraph{Reglas}
-            \input{report/reglas.tex}
+            \subparagraph{Reglas}
+                \input{report/reglas.tex}
 
-        \newpage
-        \subparagraph{Arbol con reglas}
-
-            \begin{figure}[ht]
-                \begin{adjustbox}{addcode={
-                    \begin{minipage}{\width}}{
-                        \caption{Arbol de desicion con reglas}
-                    \end{minipage}},rotate=360,center}
-                    \includegraphics[scale=.4]{arbol_con_reglas.jpg}
-                \end{adjustbox}
-            \end{figure}
-            \FloatBarrier
             \newpage
+            \subparagraph{Arbol con reglas}
+
+                \begin{figure}[ht]
+                    \begin{adjustbox}{addcode={
+                        \begin{minipage}{\width}}{
+                            \caption{Arbol de desicion con reglas}
+                        \end{minipage}},rotate=360,center}
+                        \includegraphics[scale=.4]{arbol_con_reglas.jpg}
+                    \end{adjustbox}
+                \end{figure}
+                \FloatBarrier
+                \newpage
 
     \subsubsection{Descripción del modelo}
 \subsection{Evaluar el modelo}
