@@ -1,0 +1,38 @@
+\input{report/packages.tex}
+\input{report/settings.tex}
+
+\begin{document}
+	\input{report/caratula.tex}
+	\pagenumbering{arabic}
+	\newpage
+
+	% ÍNDICE
+	\tableofcontents
+	\newpage
+	\pagenumbering{arabic}
+
+	\graphicspath{{../doc/report/pics/}}
+
+	\section{Fase 1: Comprensión del negocio}
+		\input{report/comprension_del_negocio.tex}
+
+	\newpage
+	\section{Fase 2: Comprensión de los datos}
+		\input{report/comprension_de_los_datos.tex}
+
+	\newpage
+	\section{Fase 3: Preparación de los datos}
+		\input{report/preparacion_de_los_datos.tex}
+
+	\newpage
+	\section{Fase 4: Modelado}
+		\input{report/modelado.tex}
+
+	\newpage
+	\section{Fase 5: Evaluación}
+		\input{report/evaluacion.tex}
+
+	\newpage
+	\section{Conclusiones}
+		\input{report/conclusiones.tex}
+\end{document}

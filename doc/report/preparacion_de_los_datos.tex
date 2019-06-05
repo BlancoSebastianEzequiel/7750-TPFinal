@@ -1,0 +1,109 @@
+\subsection{Reporte de calidad de los datos}
+
+    A continuacion mostraremos un cuadro que muestra que atributos obtuvimos y
+    de que tipo son:\\\\
+    \resizebox{\columnwidth}{!}{\begin{tabular}{||c | c | c||}
+        \hline
+        \textbf{Nombre de variable} & \textbf{tipo de dato} & \textbf{Descripcion} \\ [0.5ex]
+        \hline\hline
+        category\_id & numeric & son cuatro numeros que representan un grupo de categorias \\
+        \hline
+        publish\_time & date & momento exacto de la publicacion del video \\
+        \hline
+        comments\_disabled & booleano & Dice si tiene o no los comentarios habilitados \\
+        \hline
+        ratings\_disabled & booleano & Dice si tiene o no los likes/dislikes habilitados \\
+        \hline\
+        video\_error\_or\_removed & booleano & Dice si el video sufrio un error o fue borrado en el momento de la fecha de trending\_date \\
+        \hline
+        title\_size & numeric & cantidad de caracteres que tiene el titulo del video \\
+        \hline
+        tags\_quantity & numeric & cantidad de etiquetas que el video tiene \\
+        \hline
+        likes\_ratio & numeric & porcentaje de likes respecto de dilikes \\
+        \hline
+        has\_description & booleano & Dice si el video tiene descripcion o no \\
+        \hline
+        comments\_per\_view & numeric & Cantidad de cantidad de comentarios dividido cantidad de views \\
+        \hline
+        progess & numeric & Promedio de vistas segun pasan los dias desde la publicacion del video \\
+        \hline
+        is\_successful & boolean & Dice si el video es exitoso o no \\
+        \hline
+    \end{tabular}}
+
+\newpage
+\subsection{Seleccionar los datos}
+    \subsubsection{Inclusión/Exclusión de datos}
+        Los datos que se terminaron utilizando fueron todos los de tipo
+        alfanumerico, numérico y discreto.
+
+\subsection{Limpiar los datos}
+    \subsubsection{Reporte de limpieza de datos}
+        Se limpiaron los siguientes campos:
+        \begin{itemize}
+            \item video\_id
+            \item trending\_date
+            \item title
+            \item channel\_title
+            \item tags
+            \item likes
+            \item dislikes
+            \item thumbnail\_link
+            \item description
+            \item comment\_count
+        \end{itemize}
+        Algunos de estos campos se usaron para crear nuevos campos
+        .
+\subsection{Estructurar los datos}
+    \subsubsection{Derivación de atributos}
+        \begin{itemize}
+            \item \textbf{title\_size:} Longitud en cantidad de caracteres del atributo title
+            \item \textbf{publish\_time:} Se modifico el timestamp por un formato tal: YYYY-MM-DD
+            \item \textbf{tags\_quantity:} cantidad de tags
+            \item \textbf{likes\_ratio:} Ratio de likes y dislikes calculado como: likes/(likes+dislikes)
+            \item \textbf{has\_description:} Es verdadero si el video tiene descripcion.
+            \item \textbf{comments\_per\_view:} Cantidad de comentarios dividido la cantidad de vistas del video
+            \item \textbf{progess:} Promedio de vistas segun pasan los dias desde la publicacion del video
+        \end{itemize}
+    \subsubsection{Generación de registros}
+        Se genero el registro \code{is\_sucessfull} que fue calculado en funcion de si
+        el video tiene mas de 2 millones de views
+
+\subsection{Integrar los datos}
+    \subsubsection{Unificación de los datos}
+
+        Se unieron las datos del dataset con el json de categorias para conocer
+        la relacion entre el valor nuemrico y el nombre de la categoria pero como
+        el data ser ya venia con el valor numerico no fue necesario integrar los
+        datos ya que nosotros necesitamos el valor numerico. En cambio, esto fue
+        necesario para el analisis ya nos sirve para saber de que categorias
+        hablamos. Pero luego hicimos una discretizacion de grupos de categorias,
+        ya que nos parecia mas importante sea por cantidad de ocurrencias de
+        cada una o por importancia.
+        Por lo tanto a continuacion mostramos el diccionario discretiado que nos
+        dice a que grupo de categorias pertenece cada numero\\
+
+        \paragraph{Diccionario de categorias}
+
+            \begin{center}
+                \begin{tabular}{||c | c||}
+                    \hline
+                    \textbf{Nombre} & \textbf{Category\_id} \\ [0.5ex]
+                    \hline\hline
+                    Film and Animation & 0 \\
+                    \hline
+                    Gaming or Music & 1 \\
+                    \hline
+                    Videoblogging or People and Blogs orComedy or Entertainment & 2 \\
+                    \hline
+                    News and Politics or Education & 3 \\
+                    \hline
+                    others & 4 \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+\subsection{Formato de los datos}
+    \subsubsection{Reporte de formato de los Datos}
+        publish\_time: Se modifico el timestamp por un formato tal: YYYY-MM-DD

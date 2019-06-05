@@ -1,0 +1,176 @@
+\subsection{Seleccionar una técnica de modelado}
+
+Para este trabajo decidimos utilizar dos técnicas de modelado, J48 Decision Tree
+y Multilayer Perceptron. El motivo por el que elegimos estas técnicas es porque
+son algoritmos supervisados, lo cual es adecuado para el problema que intentamos
+resolver, y porque estos algoritmos, al funcionar sobre principios diferentes,
+reaccionan de distinta forma ante distintos tipos de datos de entrada,
+permitiéndonos de esta forma compararlos, y elegir el más apropiado.
+Se Aplicará cada una de estas técnicas, variando sus parámetros
+para obtener mejores resultados.
+La clase para estos algoritmos será el atributo \code{is\_successfull}, el cual
+surgirá de aplicar una función de threshold a la cantidad de views de cada
+video. Para evitar que el algoritmo tenga información relacionada directamente
+con la clase, quitaremos el atributo \code{views} del set de datos para aplicar
+los algoritmos.
+
+    \subsubsection{Técnica de modelado}
+      \textbf{J48 Decision Tree:} Se utilizará el algoritmo supervisado J48, el cual
+      consiste en un árbol de decisión utilizado para la clasificación del set
+      de datos.\\
+      \textbf{Multilayer Perceptron:} Se utilizará el algoritmo supervisado
+      Multilayer Perceptron, el cual consiste en una Red Neuronal del tipo
+      backtracking, utilizado para la clasificación del set de datos.
+
+    \subsubsection{Supuestos de modelado}
+        Todos los datos usados para el modelado son numéricos.
+
+\subsection{Generar el diseño de las pruebas}
+    \subsubsection{Diseño de las pruebas}
+
+      Para ambas técnicas de modelado se eligió utilizar un 70 \% del dataset
+      como set de entrenamiento y un 30 \% del dataset comos set de prueba,
+      elegido al azar (se mezcla al azar todo el set de pruebas y se elige el
+      70 \% de los registros que se encuentran primero). Se escogió de esta forma
+      para darle suficientes datos a la red neuronal. En total quedan 12285
+      registros para prueba y 28664 registros para entrenamiento.
+
+
+\subsection{Construir el modelo}
+    \subsubsection{Configuración de parámetros}
+
+      \paragraph{Arbol J48}
+          Para el caso del árbol J48 debemos ajustar los parámetros de nivel de
+          confianza y cantidad mínima de elementos por hoja.\\\\
+          \textbf{Nivel de Confianza\\}
+          Un nivel de confianza demasiado alto provocará que el algoritmo no
+          desestime ninguna regla lo cual llevará a un posible overfit.\\\\
+          \textbf{Cantidad mínima de Elementos por hoja\\}
+          Lo mismo puede ocurrir en caso de usar un valor demasiado bajo de
+          cantidad minima de elementos por hoja.\\
+          Luego de Experimentar con distintos valores para cada caso, llegamos a
+          los siguientes valores que nos dan los mejores resultados:\\\\
+          \textbf{Confidence Level:} 0.01\\
+          \textbf{Minium elements per Leaf:} 80\\\\
+
+          Luego de varios test, notamos que el valor de Minium elements per leaf
+          que mejor resultado en términos de precisión era 60, pero el árbol
+          quedaba demasiado grande como para comprenderlo fácilmente. Decidimos
+          subirlo a 80 para obtener un árbol razonable, perdiendo una cantidad
+          despreciable de precisión. Subirlo a mas de 80 ya podaba mucho el
+          árbol y generaba pérdidas de precisión importantes.\\
+          De la misma forma elegimos un Confidence level de 0.01. Disminuirlo
+          mas generaba una pérdida de precisión, aumentarlo nos resultaba en un
+          arbol mucho mas grande.
+
+      \paragraph{Multilayer Perceptron}
+          Para el caso del Multilayer Perceptron debemos ajustar la cantidad
+          hidden layers, el learning rate, el momentum, el training time y el
+          decay.\\\\
+          \textbf{Hidden Layers\\}
+          Si se colocan demasiadas hidden layers se incrementa mucho el tiempo
+          de procesamiento, y ademas se corre el riesgo de overfiting. Si se
+          colocan muy pocas puede que no sean suficientes para aproximar
+          correctamente la función del problema.\\\\
+          \textbf{Learning Rate\\}
+          El learning rate y el momentum afectan la velocidad a la que intenta
+          converger el algoritmo. Un learning rate o momentum demasiado elevador
+          provocaran que el algoritmo no logre encontrar un mínimo local. Un
+          learning rate o momentum demasiado pequeños provocan que el algoritmo
+          no logre encontrar un mínimo global.\\\\
+          \textbf{Training Time\\}
+          Es la cantidad de pasadas de los datos a través de la red. Aumentarlo
+          debería mejorar los resultados, sin embargo incrementa el tiempo de
+          procesamiento y puede provocar overfiting.\\\\
+          \textbf{Decay\\}
+          Si está activado El algoritmo Cambia dinámicamente el learning rate
+          según los resultados anteriores. Sirve para evitar que el algoritmo
+          se pase por alto los mínimos, pero aumenta el tiempo de
+          procesamiento.\\\\
+          Luego de Experimentar con distintos valores para cada caso, llegamos a
+          los siguientes valores que nos dan los mejores resultados:\\\\
+          \textbf{Hidden Layers:}\\
+          \textbf{Momentum:}\\
+          \textbf{Learing Rate:}\\
+          \textbf{Training Time:}\\
+          \textbf{Decay:}\\
+
+    \newpage
+    \subsubsection{Modelos}
+
+        \paragraph{Resultados de Árbol de decisión J48:}
+            \subparagraph{Matriz de confusion}
+
+                \begin{figure}[ht]
+                    \begin{adjustbox}{addcode={
+                        \begin{minipage}{\width}}{
+                        \end{minipage}},rotate=360,center}
+                        \includegraphics[scale=.6]{confusion_matrix.png}
+                    \end{adjustbox}
+                \end{figure}
+                \FloatBarrier
+
+            \subparagraph{Resultados de la clasificación}
+
+                \begin{figure}[ht]
+                    \begin{adjustbox}{addcode={
+                        \begin{minipage}{\width}}{
+                        \end{minipage}},rotate=360,center}
+                        \includegraphics[scale=.6]{clasification_results.png}
+                    \end{adjustbox}
+                \end{figure}
+                \FloatBarrier
+
+            \newpage
+            \subparagraph{Arbol}
+
+                \begin{figure}[ht]
+                    \begin{adjustbox}{addcode={
+                        \begin{minipage}{\width}}{
+                            \caption{%
+                                Arbol de decision
+                                }
+                        \end{minipage}},rotate=360,center}
+                        \includegraphics[scale=.4]{arbol.png}
+                    \end{adjustbox}
+                \end{figure}
+            \FloatBarrier
+            \newpage
+
+            \subparagraph{Reglas}
+                \input{report/reglas.tex}
+
+            \newpage
+            \subparagraph{Arbol con reglas}
+
+                \begin{figure}[ht]
+                    \begin{adjustbox}{addcode={
+                        \begin{minipage}{\width}}{
+                            \caption{Arbol de desicion con reglas}
+                        \end{minipage}},rotate=360,center}
+                        \includegraphics[scale=.4]{arbol_con_reglas.jpg}
+                    \end{adjustbox}
+                \end{figure}
+                \FloatBarrier
+                \newpage
+
+    \subsubsection{Descripción del modelo}
+\subsection{Evaluar el modelo}
+    \subsubsection{Evaluación del modelo}
+        \paragraph{Analisis de reglas}
+
+            Se detallan a continuación las reglas respaldadas por una cantidad
+            de observaciones razonable:
+            \begin{itemize}
+                \item Regla x:
+                    Something
+            \end{itemize}
+
+    \subsubsection{Revisión de la configuración de parámetros}
+        Para lograr una buena construcción del árbol, se limitó la cantidad de
+        nodos hoja a 9 ya que nos da una cantidad de reglas razonable y a menos
+        cantidad nos daban reglas mas chicas y en mas cantidad.\\
+        Se probó variar la cantidad mínima de muestras requerida para hacer
+        un split, la cantidad mínima de muestras que debe haber en un nodo
+        hoja, la cantidad máxima de niveles del árbol.
+
