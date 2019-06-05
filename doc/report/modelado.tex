@@ -100,17 +100,14 @@ los algoritmos.
         \paragraph{Resultados de Árbol de decisión J48:}
             \subparagraph{Matriz de confusion}
 
-                \begin{center}
-                  \begin{tabular}{||c | c | c||}
-                    \hline
-                    is\_successfull clasificado false & is\_successfull clasificado true & \\ [0.5ex]
-                    \hline
-                    10106 & 174 & Era originalmente false \\
-                    \hline
-                    1673 & 332 & Era originalmente true \\
-                    \hline
-                  \end{tabular}
-                \end{center}
+            \begin{figure}[ht]
+                \begin{adjustbox}{addcode={
+                    \begin{minipage}{\width}}{
+                    \end{minipage}},rotate=360,center}
+                    \includegraphics[scale=.6]{confusion_matrix.png}
+                \end{adjustbox}
+            \end{figure}
+            \FloatBarrier
 
             \subparagraph{Resultados de la clasificación}
 
@@ -165,30 +162,13 @@ los algoritmos.
             Se detallan a continuación las reglas respaldadas por una cantidad
             de observaciones razonable:
             \begin{itemize}
-                \item Regla 7:
-                    A partir de esta regla podemos inferir que los dias desde
-                    que se publico el video juega un papel muy importante ya que
-                    hay un rango de dias en los cuales el video se encuentra en
-                    tendencia y el mismo puede llegar a ser exitoso.
-                \item Regla 10:
-                    Como en la regla anterior los dias desde su publicacion
-                    juega un papel muy iportante pero tambien el porcentaje de
-                    likes respecto de dislikes es vital para que un video sea
-                    exitoso si hay un predominio de likes en un 98 \% aproximadamente
-                \item Regla 12:
-                    En esta regla podemos observar que tener una minima cantidad de
-                    tags es importante ya que los mismos ayudan a promocionar el
-                    mismo haciendo que las busquedas por tags facilite que el video
-                    sea visto
-                \item Regla 15:
-                    Con esta regla y las anteriores vemos que la categoria muestra
-                    una variable importante ya que videos de musica son los que logran
-                    un exito destacable respecto a otros videos.
+                \item Regla x:
+                    Something
             \end{itemize}
 
     \subsubsection{Revisión de la configuración de parámetros}
         Para lograr una buena construcción del árbol, se limitó la cantidad de
-        nodos hoja a 80 ya que nos da una cantidad de reglas razonable y a menos
+        nodos hoja a 9 ya que nos da una cantidad de reglas razonable y a menos
         cantidad nos daban reglas mas chicas y en mas cantidad.\\
         Se probó variar la cantidad mínima de muestras requerida para hacer
         un split, la cantidad mínima de muestras que debe haber en un nodo

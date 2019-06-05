@@ -4,7 +4,7 @@
     de que tipo son:\\\\
     \resizebox{\columnwidth}{!}{\begin{tabular}{||c | c | c||}
         \hline
-        \textbf{Mombre de variable} & \textbf{tipo de dato} & \textbf{Descripcion} \\ [0.5ex]
+        \textbf{Nombre de variable} & \textbf{tipo de dato} & \textbf{Descripcion} \\ [0.5ex]
         \hline\hline
         category\_id & numeric & son cuatro numeros que representan un grupo de categorias \\
         \hline
@@ -27,6 +27,8 @@
         comments\_per\_view & numeric & Cantidad de cantidad de comentarios dividido cantidad de views \\
         \hline
         progess & numeric & Promedio de vistas segun pasan los dias desde la publicacion del video \\
+        \hline
+        is\_successful & boolean & Dice si el video es exitoso o no \\
         \hline
     \end{tabular}}
 
@@ -56,17 +58,17 @@
 \subsection{Estructurar los datos}
     \subsubsection{Derivación de atributos}
         \begin{itemize}
-            \item \textbf{days\_since\_publication:} Cantidad de dias desde que se publico el video
             \item \textbf{title\_size:} Longitud en cantidad de caracteres del atributo title
             \item \textbf{publish\_time:} Se modifico el timestamp por un formato tal: YYYY-MM-DD
             \item \textbf{tags\_quantity:} cantidad de tags
             \item \textbf{likes\_ratio:} Ratio de likes y dislikes calculado como: likes/(likes+dislikes)
             \item \textbf{has\_description:} Es verdadero si el video tiene descripcion.
             \item \textbf{comments\_per\_view:} Cantidad de comentarios dividido la cantidad de vistas del video
+            \item \textbf{progess:} Promedio de vistas segun pasan los dias desde la publicacion del video
         \end{itemize}
     \subsubsection{Generación de registros}
         Se genero el registro \code{is\_sucessfull} que fue calculado en funcion de si
-        el video tiene mas de 2 millones de views y un ratio mayor o igual a 0.8
+        el video tiene mas de 2 millones de views
 
 \subsection{Integrar los datos}
     \subsubsection{Unificación de los datos}
@@ -76,9 +78,12 @@
         el data ser ya venia con el valor numerico no fue necesario integrar los
         datos ya que nosotros necesitamos el valor numerico. En cambio, esto fue
         necesario para el analisis ya nos sirve para saber de que categorias
-        hablamos. Por lo tanto a continuacion mostramos el diccionario que nos
-        dice a que categoria pertenece cada numero\\
-        \newpage
+        hablamos. Pero luego hicimos una discretizacion de grupos de categorias,
+        ya que nos parecia mas importante sea por cantidad de ocurrencias de
+        cada una o por importancia.
+        Por lo tanto a continuacion mostramos el diccionario discretiado que nos
+        dice a que grupo de categorias pertenece cada numero\\
+
         \paragraph{Diccionario de categorias}
 
             \begin{center}
@@ -86,69 +91,15 @@
                     \hline
                     \textbf{Nombre} & \textbf{Category\_id} \\ [0.5ex]
                     \hline\hline
-                    Film and Animation & 1 \\
+                    Film and Animation & 0 \\
                     \hline
-                    Autos and Vehicles & 2 \\
+                    Gaming or Music & 1 \\
                     \hline
-                    Music & 10 \\
+                    Videoblogging or People and Blogs orComedy or Entertainment & 2 \\
                     \hline
-                    Pets and Animals & 15 \\
+                    News and Politics or Education & 3 \\
                     \hline
-                    Sports & 17 \\
-                    \hline
-                    Short Movies & 18 \\
-                    \hline
-                    Travel and Events & 19 \\
-                    \hline
-                    Gaming & 20 \\
-                    \hline
-                    Videoblogging & 21 \\
-                    \hline
-                    People and Blogs & 22 \\
-                    \hline
-                    Comedy & 23 \\
-                    \hline
-                    Entertainment & 24 \\
-                    \hline
-                    News and Politics & 25 \\
-                    \hline
-                    Howto and Style & 26 \\
-                    \hline
-                    Education & 27 \\
-                    \hline
-                    Science and Technology & 28 \\
-                    \hline
-                    Nonprofits and Activism & 29 \\
-                    \hline
-                    Movies & 30 \\
-                    \hline
-                    Anime-Animation & 31 \\
-                    \hline
-                    Action-Adventure & 32 \\
-                    \hline
-                    Classics & 33 \\
-                    \hline
-                    Comedy & 34 \\
-                    \hline
-                    Documentary & 35 \\
-                    \hline
-                    Drama & 36 \\
-                    \hline
-                    Family & 37 \\
-                    \hline
-                    Foreign & 38 \\
-                    \hline
-                    Horror & 39 \\
-                    \hline
-                    Sci-Fi-Fantasy & 40 \\
-                    \hline
-                    Thriller & 41 \\
-                    \hline
-                    Shorts & 42 \\
-                    \hline
-                    Shows & 43 \\
-                    \hline
-                    Trailers & 44 \\
+                    others & 4 \\
                     \hline
                 \end{tabular}
             \end{center}
