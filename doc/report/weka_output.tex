@@ -1,0 +1,56 @@
+\paragraph{\title}
+    \subparagraph{Matriz de confusion}
+
+        \begin{figure}[ht]
+            \begin{adjustbox}{addcode={
+                \begin{minipage}{\width}}{
+                \end{minipage}},rotate=360,center}
+                \includegraphics[scale=.6]{\algorithm_\RUN_confusion_matrix.png}
+            \end{adjustbox}
+        \end{figure}
+        \FloatBarrier
+
+    \subparagraph{Resultados de la clasificación}
+
+        \begin{figure}[ht]
+            \begin{adjustbox}{addcode={
+                \begin{minipage}{\width}}{
+                \end{minipage}},rotate=360,center}
+                \includegraphics[scale=.6]{\algorithm_\RUN_clasification_results.png}
+            \end{adjustbox}
+        \end{figure}
+        \FloatBarrier
+
+    \if\hasRules1
+        \newpage
+        \subparagraph{Reglas}
+            \foreach \x in {0, ..., \numberOfRules} {
+                \begin{itemize}
+                    \item \textbf{Regla \x}:
+                    \begin{figure}[ht]
+                        \begin{adjustbox}{addcode={
+                            \begin{minipage}{\width}}{
+                              %\caption{Regla \x}
+                            \end{minipage}},rotate=360,center}
+                            \includegraphics[scale=.6]{weka_\RUN_rule\x.png}
+                            \includegraphics[scale=.6]{weka_\RUN_rule\x_calculations.png}
+                        \end{adjustbox}
+                    \end{figure}
+                    \FloatBarrier
+              \end{itemize}
+            }
+
+        \newpage
+        \subparagraph{Arbol}
+
+            \begin{figure}[ht]
+                \begin{adjustbox}{addcode={
+                    \begin{minipage}{\width}}{
+                        \caption{Arbol de desicion}
+                    \end{minipage}},rotate=360,center}
+                    \includegraphics[scale=.4]{tree_\RUN.png}
+                \end{adjustbox}
+            \end{figure}
+            \FloatBarrier
+        \newpage
+    \fi

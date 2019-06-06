@@ -98,61 +98,28 @@ los algoritmos.
     \newpage
     \subsubsection{Modelos}
 
-        \paragraph{Resultados de Árbol de decisión J48:}
-            \subparagraph{Matriz de confusion}
+        \def\RUN{1}
+        \def\title{Resultados de la corrida 1 del arbol de decisión J48}
+        \def\algorithm{weka}
+        \def\numberOfRules{17}
+        \def\hasRules{1}
+        \input{report/weka_output.tex}
+        \newpage
 
-                \begin{figure}[ht]
-                    \begin{adjustbox}{addcode={
-                        \begin{minipage}{\width}}{
-                        \end{minipage}},rotate=360,center}
-                        \includegraphics[scale=.6]{confusion_matrix.png}
-                    \end{adjustbox}
-                \end{figure}
-                \FloatBarrier
+        \def\RUN{2}
+        \def\title{Resultados de la corrida 2 del arbol de decisión J48}
+        \def\algorithm{weka}
+        \def\numberOfRules{20}
+        \def\hasRules{1}
+        \input{report/weka_output.tex}
+        \newpage
 
-            \subparagraph{Resultados de la clasificación}
-
-                \begin{figure}[ht]
-                    \begin{adjustbox}{addcode={
-                        \begin{minipage}{\width}}{
-                        \end{minipage}},rotate=360,center}
-                        \includegraphics[scale=.6]{clasification_results.png}
-                    \end{adjustbox}
-                \end{figure}
-                \FloatBarrier
-
-            \newpage
-            \subparagraph{Arbol}
-
-                \begin{figure}[ht]
-                    \begin{adjustbox}{addcode={
-                        \begin{minipage}{\width}}{
-                            \caption{%
-                                Arbol de decision
-                                }
-                        \end{minipage}},rotate=360,center}
-                        \includegraphics[scale=.4]{arbol.png}
-                    \end{adjustbox}
-                \end{figure}
-            \FloatBarrier
-            \newpage
-
-            \subparagraph{Reglas}
-                \input{report/reglas.tex}
-
-            \newpage
-            \subparagraph{Arbol con reglas}
-
-                \begin{figure}[ht]
-                    \begin{adjustbox}{addcode={
-                        \begin{minipage}{\width}}{
-                            \caption{Arbol de desicion con reglas}
-                        \end{minipage}},rotate=360,center}
-                        \includegraphics[scale=.4]{arbol_con_reglas.jpg}
-                    \end{adjustbox}
-                \end{figure}
-                \FloatBarrier
-                \newpage
+        \def\RUN{1}
+        \def\title{Resultados de la corrida de Perceptron}
+        \def\algorithm{perceptron}
+        \def\numberOfRules{20}
+        \def\hasRules{0}
+        \input{report/weka_output.tex}
 
     \subsubsection{Descripción del modelo}
 \subsection{Evaluar el modelo}
