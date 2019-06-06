@@ -1,0 +1,635 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H 30
+Relation:     videos-weka.filters.unsupervised.attribute.Remove-R8-weka.filters.unsupervised.attribute.NumericToNominal-R1
+Instances:    6351
+Attributes:   11
+              ﻿category_id
+              comments_disabled
+              comments_per_view
+              has_description
+              is_successful
+              likes_ratio
+              progress
+              ratings_disabled
+              tags_quantity
+              title_size
+              video_error_or_removed
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -3.9558183477117996
+    Node 2    -0.3901610472727413
+    Node 3    -2.6323596040455475
+    Node 4    -1.3592823165906887
+    Node 5    1.999580499739806
+    Node 6    -3.4320879166727947
+    Node 7    2.6067775492755323
+    Node 8    3.700753854380965
+    Node 9    -4.819992281565035
+    Node 10    2.8641567651147763
+    Node 11    2.0778630006978904
+    Node 12    2.6475764330657428
+    Node 13    2.1120003894968566
+    Node 14    -2.928230024688722
+    Node 15    2.270771518951762
+    Node 16    2.2382242119765063
+    Node 17    -4.931542769328344
+    Node 18    2.7896376275720858
+    Node 19    -1.4304204598052757
+    Node 20    3.1949731755593103
+    Node 21    -3.2206477104468973
+    Node 22    2.3377140972316846
+    Node 23    1.2405325337306166
+    Node 24    3.685368905710919
+    Node 25    -1.093009903470302
+    Node 26    -2.483754462167375
+    Node 27    1.5138623735807635
+    Node 28    1.3955459911334933
+    Node 29    -6.209591955001805
+    Node 30    -2.6658309563037
+    Node 31    1.521710981841149
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    3.9562800391820288
+    Node 2    0.3648683213405072
+    Node 3    2.632138086886876
+    Node 4    1.3423927608970492
+    Node 5    -1.999333549057369
+    Node 6    3.4337891503885927
+    Node 7    -2.6072367644284227
+    Node 8    -3.7516234528034484
+    Node 9    4.838285964345923
+    Node 10    -2.868887384055818
+    Node 11    -2.0780366335742215
+    Node 12    -2.6453283293633603
+    Node 13    -2.1478771961336536
+    Node 14    2.9285971113809985
+    Node 15    -2.26266410517809
+    Node 16    -2.212325639212337
+    Node 17    4.922811769061796
+    Node 18    -2.7626552005129335
+    Node 19    1.4426786720671445
+    Node 20    -3.2095389186860452
+    Node 21    3.2156889539485034
+    Node 22    -2.3268056913068063
+    Node 23    -1.2407895805664813
+    Node 24    -3.660744825795293
+    Node 25    1.0932366613765174
+    Node 26    2.4829975503382236
+    Node 27    -1.5159153149370865
+    Node 28    -1.3953679569858755
+    Node 29    6.21712489504845
+    Node 30    2.661412489173555
+    Node 31    -1.5235318398458806
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -0.5587119214144866
+    Attrib ﻿category_id=0    0.18618360453106253
+    Attrib ﻿category_id=1    -0.013225952097326778
+    Attrib ﻿category_id=2    0.14592947374195397
+    Attrib ﻿category_id=3    1.177446773225799
+    Attrib ﻿category_id=4    0.2759740633292677
+    Attrib comments_disabled=True    0.34226432886929814
+    Attrib comments_per_view    0.6563353639442482
+    Attrib has_description=False    0.5661064114407679
+    Attrib likes_ratio    -0.4166875386246983
+    Attrib progress    -0.49013611785938827
+    Attrib ratings_disabled=True    0.4536415705994341
+    Attrib tags_quantity    -0.00752603708413849
+    Attrib title_size    0.07610356437436945
+    Attrib video_error_or_removed=True    0.5473844851063768
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    1.5921002957219494
+    Attrib ﻿category_id=0    -1.6367246259779356
+    Attrib ﻿category_id=1    4.795117150250337
+    Attrib ﻿category_id=2    -2.947747450100619
+    Attrib ﻿category_id=3    -0.9542785619216506
+    Attrib ﻿category_id=4    -4.231493384823776
+    Attrib comments_disabled=True    -2.300139442965006
+    Attrib comments_per_view    -10.242465875922218
+    Attrib has_description=False    0.2521309471781786
+    Attrib likes_ratio    -12.129798788801185
+    Attrib progress    11.668234669596874
+    Attrib ratings_disabled=True    -0.6632029065953363
+    Attrib tags_quantity    2.9298752611842587
+    Attrib title_size    7.130913292769132
+    Attrib video_error_or_removed=True    -1.6247054543004045
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -0.2440498636235825
+    Attrib ﻿category_id=0    -0.25810460658219686
+    Attrib ﻿category_id=1    -0.9800145888611204
+    Attrib ﻿category_id=2    0.5424827836302918
+    Attrib ﻿category_id=3    0.7360553194386704
+    Attrib ﻿category_id=4    0.7595877899400139
+    Attrib comments_disabled=True    -0.19457638183695458
+    Attrib comments_per_view    3.7153459919888605
+    Attrib has_description=False    0.6273143277586166
+    Attrib likes_ratio    -0.16863273880587493
+    Attrib progress    0.34673723548016494
+    Attrib ratings_disabled=True    0.9199360429960861
+    Attrib tags_quantity    -2.2397429358724583
+    Attrib title_size    0.15907088216043172
+    Attrib video_error_or_removed=True    0.27827576556249356
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -4.665741300379624
+    Attrib ﻿category_id=0    1.7826792979604398
+    Attrib ﻿category_id=1    0.613561520120952
+    Attrib ﻿category_id=2    -1.2137252177482827
+    Attrib ﻿category_id=3    5.38520779717354
+    Attrib ﻿category_id=4    7.567539666768398
+    Attrib comments_disabled=True    -2.4232145364484263
+    Attrib comments_per_view    -3.1063596448082675
+    Attrib has_description=False    0.3163248304287422
+    Attrib likes_ratio    17.147613314539637
+    Attrib progress    -7.261101017604659
+    Attrib ratings_disabled=True    3.7335270458650314
+    Attrib tags_quantity    12.075771270408488
+    Attrib title_size    11.862681702797303
+    Attrib video_error_or_removed=True    4.736498282762689
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    1.4456489360744238
+    Attrib ﻿category_id=0    3.0001167046972435
+    Attrib ﻿category_id=1    -2.7452243001968
+    Attrib ﻿category_id=2    -2.99051662466403
+    Attrib ﻿category_id=3    3.1682925547595184
+    Attrib ﻿category_id=4    -4.768198297343357
+    Attrib comments_disabled=True    2.082157433309854
+    Attrib comments_per_view    5.64828852697231
+    Attrib has_description=False    0.6525027261053954
+    Attrib likes_ratio    13.376101949690108
+    Attrib progress    12.797562643554203
+    Attrib ratings_disabled=True    1.7382348177860811
+    Attrib tags_quantity    -1.3024752636727435
+    Attrib title_size    16.663374336305036
+    Attrib video_error_or_removed=True    -1.4508365618064423
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -4.9274023563220855
+    Attrib ﻿category_id=0    3.2160361252719016
+    Attrib ﻿category_id=1    2.9571183110857837
+    Attrib ﻿category_id=2    2.8212699346746994
+    Attrib ﻿category_id=3    1.8850176529771008
+    Attrib ﻿category_id=4    3.7907920217344646
+    Attrib comments_disabled=True    1.6852245126605625
+    Attrib comments_per_view    1.8618932394917034
+    Attrib has_description=False    0.6508307196606657
+    Attrib likes_ratio    2.2193786532469817
+    Attrib progress    -16.883156949021306
+    Attrib ratings_disabled=True    2.613399786699682
+    Attrib tags_quantity    -0.03978324554126186
+    Attrib title_size    -5.256566406262798
+    Attrib video_error_or_removed=True    4.961317825027974
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -9.662702583168617
+    Attrib ﻿category_id=0    5.980763914701873
+    Attrib ﻿category_id=1    5.792522150765897
+    Attrib ﻿category_id=2    5.671552497498325
+    Attrib ﻿category_id=3    6.016701933792268
+    Attrib ﻿category_id=4    5.689073596809902
+    Attrib comments_disabled=True    0.22814950970907633
+    Attrib comments_per_view    1.6393601112728198
+    Attrib has_description=False    1.1166153503916674
+    Attrib likes_ratio    -0.9791633609012057
+    Attrib progress    -42.367938160023186
+    Attrib ratings_disabled=True    3.9433884287731114
+    Attrib tags_quantity    -0.39861254633204696
+    Attrib title_size    0.057749673831776274
+    Attrib video_error_or_removed=True    9.6980096933647
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    0.682312588818069
+    Attrib ﻿category_id=0    -1.1005157572249307
+    Attrib ﻿category_id=1    -1.2287107323695008
+    Attrib ﻿category_id=2    1.5402538611234664
+    Attrib ﻿category_id=3    -0.4717394389506937
+    Attrib ﻿category_id=4    -0.7088582968466497
+    Attrib comments_disabled=True    0.8968070760392096
+    Attrib comments_per_view    7.121646111525214
+    Attrib has_description=False    0.28857907989844844
+    Attrib likes_ratio    -1.382183845973172
+    Attrib progress    1.6621301575820149
+    Attrib ratings_disabled=True    2.8274875522117946
+    Attrib tags_quantity    -0.34808894917378497
+    Attrib title_size    0.896580743989825
+    Attrib video_error_or_removed=True    -0.7217914656305207
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -8.946506249602859
+    Attrib ﻿category_id=0    5.858653347806925
+    Attrib ﻿category_id=1    5.327887765032935
+    Attrib ﻿category_id=2    5.391854224482392
+    Attrib ﻿category_id=3    5.40923194698978
+    Attrib ﻿category_id=4    4.887351562812435
+    Attrib comments_disabled=True    0.6441132244494583
+    Attrib comments_per_view    0.12522447014514643
+    Attrib has_description=False    1.0104593901683154
+    Attrib likes_ratio    -2.4942652614147063
+    Attrib progress    -39.723249740155396
+    Attrib ratings_disabled=True    3.3752887485159078
+    Attrib tags_quantity    -1.296021723837723
+    Attrib title_size    1.1101503115828797
+    Attrib video_error_or_removed=True    9.04091219140803
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    0.02500944593494826
+    Attrib ﻿category_id=0    -8.265689691785918
+    Attrib ﻿category_id=1    6.318852276397398
+    Attrib ﻿category_id=2    7.35646011698634
+    Attrib ﻿category_id=3    0.20154714126190318
+    Attrib ﻿category_id=4    -5.730546263998507
+    Attrib comments_disabled=True    1.106746923167677
+    Attrib comments_per_view    0.377520783766624
+    Attrib has_description=False    4.758643724355467
+    Attrib likes_ratio    -5.855500029983682
+    Attrib progress    -15.404774189594658
+    Attrib ratings_disabled=True    -2.9124693389647027
+    Attrib tags_quantity    11.4308703637367
+    Attrib title_size    18.347915245459877
+    Attrib video_error_or_removed=True    -0.0032251869035230126
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -16.094264176701635
+    Attrib ﻿category_id=0    8.253314811303774
+    Attrib ﻿category_id=1    7.506213639297655
+    Attrib ﻿category_id=2    7.409416614703643
+    Attrib ﻿category_id=3    17.266378946000046
+    Attrib ﻿category_id=4    7.800449148032499
+    Attrib comments_disabled=True    14.485017727804784
+    Attrib comments_per_view    -0.5376836122780743
+    Attrib has_description=False    0.8611580770311055
+    Attrib likes_ratio    0.2990581843473199
+    Attrib progress    -93.42953813403645
+    Attrib ratings_disabled=True    14.657013437485764
+    Attrib tags_quantity    0.17125672014199544
+    Attrib title_size    -1.77700414223225
+    Attrib video_error_or_removed=True    16.149890575256652
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -5.005082763103237
+    Attrib ﻿category_id=0    3.2562542087377913
+    Attrib ﻿category_id=1    3.230516230828175
+    Attrib ﻿category_id=2    2.817209794328851
+    Attrib ﻿category_id=3    3.0298016174005156
+    Attrib ﻿category_id=4    2.648549771918615
+    Attrib comments_disabled=True    0.771813066335075
+    Attrib comments_per_view    1.6510376071087378
+    Attrib has_description=False    0.4863518566933295
+    Attrib likes_ratio    -2.1235326338480247
+    Attrib progress    -22.497312485705667
+    Attrib ratings_disabled=True    1.631626737079329
+    Attrib tags_quantity    -0.5563643979732789
+    Attrib title_size    0.26569569903198703
+    Attrib video_error_or_removed=True    4.987768159780359
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    1.2608831990844716
+    Attrib ﻿category_id=0    -1.5332694133548368
+    Attrib ﻿category_id=1    -1.1842597024742803
+    Attrib ﻿category_id=2    -1.9707772616437016
+    Attrib ﻿category_id=3    -2.2331101171975694
+    Attrib ﻿category_id=4    3.1298044612773204
+    Attrib comments_disabled=True    5.02570303541973
+    Attrib comments_per_view    4.961554429740582
+    Attrib has_description=False    3.301555664370425
+    Attrib likes_ratio    -4.8011254629733635
+    Attrib progress    2.5355352530020827
+    Attrib ratings_disabled=True    2.4967694373967824
+    Attrib tags_quantity    -7.119596128751122
+    Attrib title_size    1.393121578820754
+    Attrib video_error_or_removed=True    -1.2404779662451701
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -6.378536583105877
+    Attrib ﻿category_id=0    3.9018885640601586
+    Attrib ﻿category_id=1    4.1474902506857925
+    Attrib ﻿category_id=2    3.566971955677764
+    Attrib ﻿category_id=3    3.93104571327667
+    Attrib ﻿category_id=4    3.521359238111194
+    Attrib comments_disabled=True    0.8329368539048487
+    Attrib comments_per_view    3.564399880439288
+    Attrib has_description=False    1.3959124083804466
+    Attrib likes_ratio    -0.721375807829752
+    Attrib progress    -29.345313703444297
+    Attrib ratings_disabled=True    2.017778696323933
+    Attrib tags_quantity    -0.6556596116471765
+    Attrib title_size    0.1335459719546459
+    Attrib video_error_or_removed=True    6.328581023317179
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    -4.8661196054619555
+    Attrib ﻿category_id=0    3.1702282548236416
+    Attrib ﻿category_id=1    3.206134507886072
+    Attrib ﻿category_id=2    2.694238395111111
+    Attrib ﻿category_id=3    2.952834007345904
+    Attrib ﻿category_id=4    2.598751808618236
+    Attrib comments_disabled=True    0.7469831141409679
+    Attrib comments_per_view    2.033924498558174
+    Attrib has_description=False    0.6007499633854368
+    Attrib likes_ratio    -2.378412738430414
+    Attrib progress    -22.337036639341548
+    Attrib ratings_disabled=True    1.3729910715803013
+    Attrib tags_quantity    -0.3120320720079165
+    Attrib title_size    -0.026842168258168538
+    Attrib video_error_or_removed=True    4.886257814283512
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    1.6191659849121685
+    Attrib ﻿category_id=0    0.24311748625767127
+    Attrib ﻿category_id=1    -0.1568808411579652
+    Attrib ﻿category_id=2    -1.01824995960602
+    Attrib ﻿category_id=3    -1.49124820811031
+    Attrib ﻿category_id=4    -2.5103425459785735
+    Attrib comments_disabled=True    0.44897787687067486
+    Attrib comments_per_view    -2.4559699193243305
+    Attrib has_description=False    5.46098053119107
+    Attrib likes_ratio    -1.2684253462444084
+    Attrib progress    5.9479671959328435
+    Attrib ratings_disabled=True    2.4759773306070714
+    Attrib tags_quantity    2.458215750779772
+    Attrib title_size    -2.866870298499186
+    Attrib video_error_or_removed=True    -1.6827287805225155
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -8.347843254680924
+    Attrib ﻿category_id=0    5.249660452756199
+    Attrib ﻿category_id=1    4.967919420066586
+    Attrib ﻿category_id=2    4.870257496512952
+    Attrib ﻿category_id=3    5.0535288740117865
+    Attrib ﻿category_id=4    4.773200507054687
+    Attrib comments_disabled=True    0.4829325925335596
+    Attrib comments_per_view    0.7755157398052724
+    Attrib has_description=False    0.9803108632512587
+    Attrib likes_ratio    -2.1425560060624083
+    Attrib progress    -37.013540296209094
+    Attrib ratings_disabled=True    3.211195156163685
+    Attrib tags_quantity    -0.8561105676078956
+    Attrib title_size    0.3185117668351386
+    Attrib video_error_or_removed=True    8.418606662851776
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -0.27975871397891017
+    Attrib ﻿category_id=0    -0.24283281649412597
+    Attrib ﻿category_id=1    -0.9679476137695502
+    Attrib ﻿category_id=2    0.6383234178560436
+    Attrib ﻿category_id=3    0.5871222141327381
+    Attrib ﻿category_id=4    0.8562474270843097
+    Attrib comments_disabled=True    -0.3951577465573602
+    Attrib comments_per_view    3.868443334331255
+    Attrib has_description=False    0.7340647751086782
+    Attrib likes_ratio    -0.3087391050579837
+    Attrib progress    0.47850480657287336
+    Attrib ratings_disabled=True    0.8472378719605992
+    Attrib tags_quantity    -2.5387933548073045
+    Attrib title_size    0.23680730590802415
+    Attrib video_error_or_removed=True    0.23948960622423668
+Sigmoid Node 20
+    Inputs    Weights
+    Threshold    -14.694533407558682
+    Attrib ﻿category_id=0    9.371794898022145
+    Attrib ﻿category_id=1    8.568482072611195
+    Attrib ﻿category_id=2    8.826805083878638
+    Attrib ﻿category_id=3    8.787848838276538
+    Attrib ﻿category_id=4    8.687788708821232
+    Attrib comments_disabled=True    -0.27432364046103114
+    Attrib comments_per_view    -2.2516592169429934
+    Attrib has_description=False    4.125667803096802
+    Attrib likes_ratio    -1.427371444611316
+    Attrib progress    -64.78226657873022
+    Attrib ratings_disabled=True    6.972303375470339
+    Attrib tags_quantity    -0.8963481890973307
+    Attrib title_size    0.653580525453802
+    Attrib video_error_or_removed=True    14.780031208830758
+Sigmoid Node 21
+    Inputs    Weights
+    Threshold    -0.05033588395981198
+    Attrib ﻿category_id=0    -0.4310795025282547
+    Attrib ﻿category_id=1    -1.1832875704053414
+    Attrib ﻿category_id=2    0.21564550750752465
+    Attrib ﻿category_id=3    0.15499597757973962
+    Attrib ﻿category_id=4    1.2375745105454237
+    Attrib comments_disabled=True    -0.5247027466724941
+    Attrib comments_per_view    5.394937268873848
+    Attrib has_description=False    0.6479314800175726
+    Attrib likes_ratio    -0.3112892654575846
+    Attrib progress    1.0031980263761817
+    Attrib ratings_disabled=True    1.0855763648315278
+    Attrib tags_quantity    -2.502010728820256
+    Attrib title_size    1.106513293341092
+    Attrib video_error_or_removed=True    0.00377697923259613
+Sigmoid Node 22
+    Inputs    Weights
+    Threshold    -7.526915493716869
+    Attrib ﻿category_id=0    4.644296427915478
+    Attrib ﻿category_id=1    4.857872300569056
+    Attrib ﻿category_id=2    4.238208656693041
+    Attrib ﻿category_id=3    4.458513544946381
+    Attrib ﻿category_id=4    4.237868692499458
+    Attrib comments_disabled=True    0.8369375832576543
+    Attrib comments_per_view    3.5256746862162283
+    Attrib has_description=False    1.3991159251185414
+    Attrib likes_ratio    0.21474941428676844
+    Attrib progress    -33.614997847814585
+    Attrib ratings_disabled=True    2.8047247418049244
+    Attrib tags_quantity    -0.43831228261638766
+    Attrib title_size    -0.07735600653922084
+    Attrib video_error_or_removed=True    7.522316355756903
+Sigmoid Node 23
+    Inputs    Weights
+    Threshold    -8.47952735798389
+    Attrib ﻿category_id=0    2.7294287476440307
+    Attrib ﻿category_id=1    4.887925606858011
+    Attrib ﻿category_id=2    5.00365167858663
+    Attrib ﻿category_id=3    2.8514807919644998
+    Attrib ﻿category_id=4    9.887511569632997
+    Attrib comments_disabled=True    -2.749437450684599
+    Attrib comments_per_view    2.1162201934257308
+    Attrib has_description=False    4.18965343716831
+    Attrib likes_ratio    3.6451631828809195
+    Attrib progress    -23.988445479449613
+    Attrib ratings_disabled=True    5.203780780308168
+    Attrib tags_quantity    -23.06945969722988
+    Attrib title_size    2.5917339628596
+    Attrib video_error_or_removed=True    8.530307216762868
+Sigmoid Node 24
+    Inputs    Weights
+    Threshold    -14.125865221959895
+    Attrib ﻿category_id=0    8.993096605024242
+    Attrib ﻿category_id=1    8.21312660063143
+    Attrib ﻿category_id=2    8.46751381841678
+    Attrib ﻿category_id=3    8.393268655516946
+    Attrib ﻿category_id=4    8.26874023952444
+    Attrib comments_disabled=True    -0.15403223152966494
+    Attrib comments_per_view    -1.566991279540291
+    Attrib has_description=False    1.737813742786471
+    Attrib likes_ratio    -1.3514651469844479
+    Attrib progress    -60.16151893969388
+    Attrib ratings_disabled=True    6.664386783572191
+    Attrib tags_quantity    -0.9464807837028065
+    Attrib title_size    0.7274896591190875
+    Attrib video_error_or_removed=True    14.187341771525286
+Sigmoid Node 25
+    Inputs    Weights
+    Threshold    3.9380972640353176
+    Attrib ﻿category_id=0    4.137761844398387
+    Attrib ﻿category_id=1    -0.6533755389051525
+    Attrib ﻿category_id=2    -2.575785688878128
+    Attrib ﻿category_id=3    -4.112917718308866
+    Attrib ﻿category_id=4    -8.513449578888512
+    Attrib comments_disabled=True    -2.285982391422703
+    Attrib comments_per_view    -2.4221342382791935
+    Attrib has_description=False    -2.0482607609920804
+    Attrib likes_ratio    -8.321223917361559
+    Attrib progress    18.45786395900365
+    Attrib ratings_disabled=True    -2.892968528095533
+    Attrib tags_quantity    -6.641899751611358
+    Attrib title_size    18.262378568648586
+    Attrib video_error_or_removed=True    -3.9695828849109023
+Sigmoid Node 26
+    Inputs    Weights
+    Threshold    0.868354765791357
+    Attrib ﻿category_id=0    -1.7645255136267053
+    Attrib ﻿category_id=1    -1.495497919168147
+    Attrib ﻿category_id=2    1.0677760684162343
+    Attrib ﻿category_id=3    -1.4040510359573883
+    Attrib ﻿category_id=4    1.0722225046146794
+    Attrib comments_disabled=True    5.141183198956645
+    Attrib comments_per_view    0.07112831427737801
+    Attrib has_description=False    -0.04694817291632634
+    Attrib likes_ratio    -4.083512856456495
+    Attrib progress    6.4825292367943534
+    Attrib ratings_disabled=True    0.751802820875377
+    Attrib tags_quantity    -7.500136519692271
+    Attrib title_size    2.75516651319211
+    Attrib video_error_or_removed=True    -0.9077868904400669
+Sigmoid Node 27
+    Inputs    Weights
+    Threshold    -3.1562050553903473
+    Attrib ﻿category_id=0    4.507576227652668
+    Attrib ﻿category_id=1    1.5359886590007388
+    Attrib ﻿category_id=2    0.7851204855748682
+    Attrib ﻿category_id=3    1.659090392378298
+    Attrib ﻿category_id=4    1.03640529526982
+    Attrib comments_disabled=True    -0.5016235652673335
+    Attrib comments_per_view    0.007709625321072356
+    Attrib has_description=False    0.9906179536875863
+    Attrib likes_ratio    2.7045983546600962
+    Attrib progress    -9.484645002090828
+    Attrib ratings_disabled=True    1.9947119980053352
+    Attrib tags_quantity    -1.875538682357746
+    Attrib title_size    3.04650284181754
+    Attrib video_error_or_removed=True    3.24383654489593
+Sigmoid Node 28
+    Inputs    Weights
+    Threshold    -4.970014836596952
+    Attrib ﻿category_id=0    2.1864024836727385
+    Attrib ﻿category_id=1    0.8191417869458543
+    Attrib ﻿category_id=2    2.211700547437862
+    Attrib ﻿category_id=3    10.722088350231077
+    Attrib ﻿category_id=4    -1.0911840751016268
+    Attrib comments_disabled=True    -7.366390922462511
+    Attrib comments_per_view    -8.148850788953618
+    Attrib has_description=False    1.7682092443879946
+    Attrib likes_ratio    13.667630457456875
+    Attrib progress    -13.310574021679404
+    Attrib ratings_disabled=True    3.841925609200766
+    Attrib tags_quantity    16.36126836408907
+    Attrib title_size    18.638296241562486
+    Attrib video_error_or_removed=True    5.028640961576193
+Sigmoid Node 29
+    Inputs    Weights
+    Threshold    0.5258361514723305
+    Attrib ﻿category_id=0    2.452762767584548
+    Attrib ﻿category_id=1    0.4530690422285734
+    Attrib ﻿category_id=2    -2.1853393206744016
+    Attrib ﻿category_id=3    -0.6202520517594651
+    Attrib ﻿category_id=4    -1.5974871089113367
+    Attrib comments_disabled=True    -0.23038525768621823
+    Attrib comments_per_view    -2.8892871734069216
+    Attrib has_description=False    7.764968735450731
+    Attrib likes_ratio    0.22566694200059265
+    Attrib progress    7.984299316775472
+    Attrib ratings_disabled=True    0.3398160461027805
+    Attrib tags_quantity    4.5290702483012915
+    Attrib title_size    -5.623870490354295
+    Attrib video_error_or_removed=True    -0.4489587646399985
+Sigmoid Node 30
+    Inputs    Weights
+    Threshold    1.451884664608948
+    Attrib ﻿category_id=0    -0.9903164060788081
+    Attrib ﻿category_id=1    -0.1617100926549975
+    Attrib ﻿category_id=2    -0.9053253931295442
+    Attrib ﻿category_id=3    0.43121922487683695
+    Attrib ﻿category_id=4    -2.69423706375027
+    Attrib comments_disabled=True    0.9828674584566577
+    Attrib comments_per_view    -0.9045077096927523
+    Attrib has_description=False    -0.7716766810514102
+    Attrib likes_ratio    -0.9408957438173013
+    Attrib progress    7.9076448893318565
+    Attrib ratings_disabled=True    2.2690581799836678
+    Attrib tags_quantity    0.7516063714457388
+    Attrib title_size    2.6398705233669304
+    Attrib video_error_or_removed=True    -1.3958868085853746
+Sigmoid Node 31
+    Inputs    Weights
+    Threshold    -5.98033274355103
+    Attrib ﻿category_id=0    3.8090178555069008
+    Attrib ﻿category_id=1    4.028308546437736
+    Attrib ﻿category_id=2    3.204913899379732
+    Attrib ﻿category_id=3    3.318232951808287
+    Attrib ﻿category_id=4    3.5513241461556926
+    Attrib comments_disabled=True    1.8077849267049173
+    Attrib comments_per_view    2.7063385086094884
+    Attrib has_description=False    1.0892730040807896
+    Attrib likes_ratio    -2.221280424032363
+    Attrib progress    -29.20352954478351
+    Attrib ratings_disabled=True    1.4997389234693863
+    Attrib tags_quantity    -0.08379437765657259
+    Attrib title_size    -0.30457115937826823
+    Attrib video_error_or_removed=True    5.961048955629173
+Class False
+    Input
+    Node 0
+Class True
+    Input
+    Node 1
+
+
+Time taken to build model: 22.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1911               88.5132 %
+Incorrectly Classified Instances       248               11.4868 %
+Kappa statistic                          0.6003
+Mean absolute error                      0.1717
+Root mean squared error                  0.2956
+Relative absolute error                 55.8918 %
+Root relative squared error             75.9255 %
+Total Number of Instances             2159     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,945    0,376    0,917      0,945    0,930      0,603    0,891     0,962     False
+                 0,624    0,055    0,721      0,624    0,669      0,603    0,891     0,742     True
+Weighted Avg.    0,885    0,316    0,880      0,885    0,882      0,603    0,891     0,921     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1660   97 |    a = False
+  151  251 |    b = True
+

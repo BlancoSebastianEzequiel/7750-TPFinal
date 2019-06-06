@@ -1,0 +1,91 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.1 -M 3
+Relation:     videos-weka.filters.unsupervised.attribute.Remove-R8-weka.filters.unsupervised.attribute.NumericToNominal-R1
+Instances:    6351
+Attributes:   11
+              ﻿category_id
+              comments_disabled
+              comments_per_view
+              has_description
+              is_successful
+              likes_ratio
+              progress
+              ratings_disabled
+              tags_quantity
+              title_size
+              video_error_or_removed
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+progress <= 104370: False (4333.0/147.0)
+progress > 104370
+|   progress <= 268248: False (1005.0/342.0)
+|   progress > 268248
+|   |   progress <= 1912737
+|   |   |   ﻿category_id = 0: True (56.0/5.0)
+|   |   |   ﻿category_id = 1: True (235.0/19.0)
+|   |   |   ﻿category_id = 2
+|   |   |   |   tags_quantity <= 25: True (177.0/49.0)
+|   |   |   |   tags_quantity > 25
+|   |   |   |   |   title_size <= 25: True (15.0/1.0)
+|   |   |   |   |   title_size > 25: False (224.0/104.0)
+|   |   |   ﻿category_id = 3
+|   |   |   |   tags_quantity <= 21
+|   |   |   |   |   comments_per_view <= 0.001495: True (5.0)
+|   |   |   |   |   comments_per_view > 0.001495
+|   |   |   |   |   |   progress <= 482712: False (15.0/3.0)
+|   |   |   |   |   |   progress > 482712: True (5.0/1.0)
+|   |   |   |   tags_quantity > 21: False (19.0)
+|   |   |   ﻿category_id = 4
+|   |   |   |   title_size <= 81
+|   |   |   |   |   likes_ratio <= 0.853659: True (12.0)
+|   |   |   |   |   likes_ratio > 0.853659
+|   |   |   |   |   |   title_size <= 41: True (51.0/13.0)
+|   |   |   |   |   |   title_size > 41
+|   |   |   |   |   |   |   likes_ratio <= 0.984742
+|   |   |   |   |   |   |   |   title_size <= 53: False (20.0/3.0)
+|   |   |   |   |   |   |   |   title_size > 53: True (35.0/14.0)
+|   |   |   |   |   |   |   likes_ratio > 0.984742: True (6.0)
+|   |   |   |   title_size > 81: False (26.0/4.0)
+|   |   progress > 1912737: True (112.0)
+
+Number of Leaves  : 	18
+
+Size of the tree : 	32
+
+
+Time taken to build model: 0.04 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1921               88.9764 %
+Incorrectly Classified Instances       238               11.0236 %
+Kappa statistic                          0.5817
+Mean absolute error                      0.1626
+Root mean squared error                  0.2851
+Relative absolute error                 52.9347 %
+Root relative squared error             73.2266 %
+Total Number of Instances             2159     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,971    0,465    0,901      0,971    0,935      0,599    0,887     0,955     False
+                 0,535    0,029    0,808      0,535    0,644      0,599    0,887     0,700     True
+Weighted Avg.    0,890    0,384    0,884      0,890    0,881      0,599    0,887     0,907     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1706   51 |    a = False
+  187  215 |    b = True
+
