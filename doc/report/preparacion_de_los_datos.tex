@@ -8,8 +8,6 @@
         \hline\hline
         category\_id & numeric & son cuatro numeros que representan un grupo de categorias \\
         \hline
-        publish\_time & date & momento exacto de la publicacion del video \\
-        \hline
         comments\_disabled & booleano & Dice si tiene o no los comentarios habilitados \\
         \hline
         ratings\_disabled & booleano & Dice si tiene o no los likes/dislikes habilitados \\
@@ -52,6 +50,7 @@
             \item thumbnail\_link
             \item description
             \item comment\_count
+            \item publish\_time
         \end{itemize}
         Algunos de estos campos se usaron para crear nuevos campos
         .
@@ -64,11 +63,11 @@
             \item \textbf{likes\_ratio:} Ratio de likes y dislikes calculado como: likes/(likes+dislikes)
             \item \textbf{has\_description:} Es verdadero si el video tiene descripcion.
             \item \textbf{comments\_per\_view:} Cantidad de comentarios dividido la cantidad de vistas del video
-            \item \textbf{progess:} Promedio de vistas segun pasan los dias desde la publicacion del video
+            \item \textbf{progess:} Promedio de vistas por dia que transcurre desde la publicacion del video
         \end{itemize}
     \subsubsection{Generación de registros}
         Se genero el registro \code{is\_sucessfull} que fue calculado en funcion de si
-        el video tiene mas de 2 millones de views
+        el video tiene mas de 2 millones de vistas
 
 \subsection{Integrar los datos}
     \subsubsection{Unificación de los datos}
