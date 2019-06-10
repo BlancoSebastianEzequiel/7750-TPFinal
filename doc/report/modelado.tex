@@ -49,18 +49,34 @@ los algoritmos.
           Lo mismo puede ocurrir en caso de usar un valor demasiado bajo de
           cantidad minima de elementos por hoja.\\
           Luego de Experimentar con distintos valores para cada caso, llegamos a
-          los siguientes valores que nos dan los mejores resultados:\\\\
+          los siguientes valores que nos dan los mejores resultados:
 
           \subparagraph{Parámetros para el arbol 1}
 
-              \textbf{Confidence Level:} 0.1\\
-              \textbf{Minium elements per Leaf:} 3\\\\
+            \begin{tabular}{||c | c||}
+                \hline
+                \textbf{Parametro} & \textbf{valor} \\ [0.5ex]
+                \hline\hline
+                Confidence Level & 0.1 \\
+                \hline
+                Minium elements per Leaf & 3 \\
+                \hline
+            \end{tabular}
 
           \subparagraph{Parámetros para el arbol 2}
 
-              \textbf{Confidence Level:} 0.3\\
-              \textbf{Minium elements per Leaf:} 20\\\\
+            \begin{tabular}{||c | c||}
+                \hline
+                \textbf{Parametro} & \textbf{valor} \\ [0.5ex]
+                \hline\hline
+                Confidence Level & 0.3 \\
+                \hline
+                Minium elements per Leaf & 20 \\
+                \hline
+            \end{tabular}
 
+         \hfill \break
+         \hfill \break
           Luego de varios test, notamos que el valor de Minium elements per leaf
           que mejor resultado en términos de precisión era 60, pero el árbol
           quedaba demasiado grande como para comprenderlo fácilmente. Decidimos
@@ -96,13 +112,23 @@ los algoritmos.
           se pase por alto los mínimos, pero aumenta el tiempo de
           procesamiento.\\\\
           Luego de Experimentar con distintos valores para cada caso, llegamos a
-          los siguientes valores que nos dan los mejores resultados:\\\\
-          \textbf{Hidden Layers:} 30\\
-          \textbf{Momentum:} 0.2\\
-          \textbf{Learing Rate:} 0.3\\
-          \textbf{Training Time:} 500\\
-          \textbf{Decay:} Desactivado\\
-
+          los siguientes valores que nos dan los mejores resultados:
+          \subparagraph{Parámetros}
+                \begin{tabular}{||c | c||}
+                    \hline
+                    \textbf{Parametro} & \textbf{valor} \\ [0.5ex]
+                    \hline\hline
+                    Hidden Layers & 30 \\
+                    \hline
+                    Momentum & 0.2 \\
+                    \hline
+                    Learing Rate & 0.3 \\
+                    \hline
+                    Training Time & 500 \\
+                    \hline
+                    Decay & Desactivado \\
+                    \hline
+                \end{tabular}
     \newpage
     \subsubsection{Modelos}
 
