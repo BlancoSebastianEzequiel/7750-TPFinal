@@ -23,7 +23,7 @@ los algoritmos.
       backtracking, utilizado para la clasificación del set de datos.
 
     \subsubsection{Supuestos de modelado}
-        Todos los datos usados para el modelado son numéricos.
+        Todos los datos usados para el modelado son numéricos, booleanos
 
 \subsection{Generar el diseño de las pruebas}
     \subsubsection{Diseño de las pruebas}
@@ -32,8 +32,8 @@ los algoritmos.
       como set de entrenamiento y un 30 \% del dataset comos set de prueba,
       elegido al azar (se mezcla al azar todo el set de pruebas y se elige el
       70 \% de los registros que se encuentran primero). Se escogió de esta forma
-      para darle suficientes datos a la red neuronal. En total quedan 12285
-      registros para prueba y 28664 registros para entrenamiento.
+      para darle suficientes datos a la red neuronal. En total quedan 1906
+      registros para prueba y 4445 registros para entrenamiento.
 
 
 \subsection{Construir el modelo}
@@ -50,8 +50,16 @@ los algoritmos.
           cantidad minima de elementos por hoja.\\
           Luego de Experimentar con distintos valores para cada caso, llegamos a
           los siguientes valores que nos dan los mejores resultados:\\\\
-          \textbf{Confidence Level:} 0.01\\
-          \textbf{Minium elements per Leaf:} 80\\\\
+
+          \subparagraph{Parámetros para el arbol 1}
+
+              \textbf{Confidence Level:} 0.1\\
+              \textbf{Minium elements per Leaf:} 3\\\\
+
+          \subparagraph{Parámetros para el arbol 2}
+
+              \textbf{Confidence Level:} 0.3\\
+              \textbf{Minium elements per Leaf:} 20\\\\
 
           Luego de varios test, notamos que el valor de Minium elements per leaf
           que mejor resultado en términos de precisión era 60, pero el árbol
@@ -89,11 +97,11 @@ los algoritmos.
           procesamiento.\\\\
           Luego de Experimentar con distintos valores para cada caso, llegamos a
           los siguientes valores que nos dan los mejores resultados:\\\\
-          \textbf{Hidden Layers:}\\
-          \textbf{Momentum:}\\
-          \textbf{Learing Rate:}\\
-          \textbf{Training Time:}\\
-          \textbf{Decay:}\\
+          \textbf{Hidden Layers:} 30\\
+          \textbf{Momentum:} 0.2\\
+          \textbf{Learing Rate:} 0.3\\
+          \textbf{Training Time:} 500\\
+          \textbf{Decay:} Desactivado\\
 
     \newpage
     \subsubsection{Modelos}
@@ -125,9 +133,6 @@ los algoritmos.
 \subsection{Evaluar el modelo}
     \subsubsection{Evaluación del modelo}
         \paragraph{Analisis de reglas}
-
-            Se detallan a continuación las reglas respaldadas por una cantidad
-            de observaciones razonable:
             \begin{itemize}
                 \item \textbf{Arbol 1:}
                 \begin{itemize}
@@ -150,13 +155,70 @@ los algoritmos.
                 \end{itemize}
                 \item \textbf{Arbol 2:}
                 \begin{itemize}
-                    \item \textbf{Regla 2}: Aqui podemos ver que la categoria y
-                    el progreso de vistas del video son factores claves en la
-                    decicion sobre si el video es exitoso o no
-                    \item \textbf{Regla 10}: Aqui evaluamos el valor de la
-                    categoria del video, el cual puede ser un atractivo clave
-                    para que la gente tenga curiosidad del ver un video y llevar
-                    al mismo al exito
+                    \item  \textbf{Reglas 0 y 1:} Esta regla nos muestra que
+                    cuando un video no comienza con un crecimiento elevado,
+                    entonces es dificil que pueda llegar a ser un video exitoso,
+                    por lo que parece ser que los videos con bajo crecimiento
+                    tienen poca probabilidad de llegar a ser exitosos.
+
+                    \item \textbf{Regla 2:} En esta regla podemos ver que los
+                    videos que comienzan con buen crecimiento y son de la
+                    categoria 0 tienen alta probabilidad de ser exitosos. Esto
+                    es razonable ya que la categoria 0 corresponde a los videos
+                    de peliculas y animacion, cuyo exito o no suele definirse
+                    en cuanto son subidos.
+
+                    \item \textbf{Regla 3:} Esta regla muestra que los videos de
+                    cierta categoria tienen mas chances de ser exitoso. Ademas
+                    nos presenta como requisito que tenga una cierta cantidad
+                    de likes ratio, lo que nos muestra que la cantidad de likes
+                    influye en la popularidad y el exito de los videos.
+
+                    \item \textbf{Regla 5:} Esta regla puede deberse a que la
+                    gente navega muy rapido buscando videos, y los titulos mas
+                    cortos se pueden leer mas rapidamente. A su vez, en la
+                    categoria que nos muestra de blogs y entretenimiento suelen
+                    ubicarse los videos de canales exitosos, los cuales por lo
+                    general tienen titulos cortos y, al tener muchos seguidores
+                    el canal en si, tienen mas cantidad de views.
+
+                    \item \textbf{Regla 10:} Esta tiene una confianza muy alta
+                    y una captura razonable, pero simplemente nos muestra que
+                    los videos de categoria 1 suelen ser exitosos lo cual
+                    coincide con nuestro conocimiento previo ya que los videos
+                    de musica son los mas populares de youtube.
+
+                    \item \textbf{Regla 11:} Esta regla tiene una confianza y
+                    captura razonables, y nos muestra que los videos de
+                    entretenimiento y blogging que tienen menos de 25 tags
+                    tienen mas chances de ser exitosos. Una explicacion de esto
+                    podria ser por la inversa, es decir que los videos que
+                    tienen demasiados tags son menos exitosos, ya que
+                    probablemente son videos largos que abarcan muchos temas y
+                    por lo general menos views.
+
+                    \item \textbf{Regla 16:} Regla tiene poca captura y poco
+                    soporte, pero una confianza muy alta, lo que significa que
+                    identifica un nicho, y tiene sentido que son videos de una
+                    categoria que no es de las mas comunes, que tienen titulos
+                    muy largos, y una cantidad bajas de likes, por lo que
+                    parecen ser videos polemicos, que terminan siendo exitosos
+                    debido justamente a la polemica generado por estos mismos.
+
+                    \item \textbf{Regla 20:} Esta regla muestra algo que
+                    habiamos visto en el entendimiento del negocio y es que los
+                    videos con titulos extremadamente largos tienen menos
+                    chances de exito.
+
+                    \item \textbf{Regla 4, 6, 8, 13 y 18:} Estas reglas tienen
+                    poca confianza, por lo que no resulta muy apropiado tener
+                    en cuenta sus resultados ya que pueden llevar a errores.
+
+                    \item \textbf{Regla 7, 9, 12, 15, 17 y 19:} Estas reglas
+                    tienen poca captura y soporte, por lo que no son
+                    representativas de la poblacion, y tampoco parecieran
+                    señalar algun nicho ya que sus confianzas no son tan altas.
+
                 \end{itemize}
             \end{itemize}
 

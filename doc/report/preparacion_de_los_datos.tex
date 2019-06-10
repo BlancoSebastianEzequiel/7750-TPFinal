@@ -73,13 +73,21 @@
     \subsubsection{Unificación de los datos}
 
         Se unieron las datos del dataset con el json de categorias para conocer
-        la relacion entre el valor nuemrico y el nombre de la categoria pero como
+        la relacion entre el valor numerico y el nombre de la categoria pero como
         el data ser ya venia con el valor numerico no fue necesario integrar los
         datos ya que nosotros necesitamos el valor numerico. En cambio, esto fue
         necesario para el analisis ya nos sirve para saber de que categorias
-        hablamos. Pero luego hicimos una discretizacion de grupos de categorias,
-        ya que nos parecia mas importante sea por cantidad de ocurrencias de
-        cada una o por importancia.
+        hablamos. \\
+        Luego hicimos una discretizacion de grupos de categorias
+        debido a que teniamos demasiadas categorias posibles, los resultados
+        obtenidos de esta manera no son satisfactorios ya que son demasiado +
+        completos. Analizamos diferentes formas de agruparlos y llegamos a la
+        conclusion de que esta forma que utilizamos es apropiada para el
+        tratamiento que haremos, ya que las categorias tienen una alta
+        cohesion, tienen muchas cosas similares entre si, y hay una alta
+        probabilidad de que las categorias que pertenecen al mismo grupo tengan
+        reglas similares.\\\\
+
         Por lo tanto a continuacion mostramos el diccionario discretiado que nos
         dice a que grupo de categorias pertenece cada numero\\
 
