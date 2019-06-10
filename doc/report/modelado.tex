@@ -161,15 +161,9 @@ los algoritmos.
         del algoritmo a clasificar correcta o incorrectamente los eventos, según
         sus atributos
 
-        \begin{figure}[ht]
-            \begin{adjustbox}{addcode={
-                \begin{minipage}{\width}}{
-                    \caption{Clasif. Errors vs tag length}
-                \end{minipage}},rotate=360,center}
-                \includegraphics[scale=.6]{clasif_error_tags_length.png}
-            \end{adjustbox}
-        \end{figure}
-        \FloatBarrier
+        \def\path{clasif_error_tags_length.png}
+        \def\text{Clasif. Errors vs tag length}
+        \input{report/image.tex}
 
         Podemos observar en este gráfico que los videos con muchos tags tienen
         menos chance de ser exitosos, algo que ya habíamos visto en la etapa de
@@ -177,30 +171,18 @@ los algoritmos.
         muchos tags, aquellos clasificados como exitosos son en su mayoría
         falsos positivos, esta información puede ser útil para futuros análisis.
 
-        \begin{figure}[ht]
-            \begin{adjustbox}{addcode={
-                \begin{minipage}{\width}}{
-                    \caption{Clasif. errors vs title length}
-                \end{minipage}},rotate=360,center}
-                \includegraphics[scale=.6]{clasif_error_title_length.png}
-            \end{adjustbox}
-        \end{figure}
-        \FloatBarrier
+        \def\path{clasif_error_title_length.png}
+        \def\text{Clasif. errors vs title length}
+        \input{report/image.tex}
 
         Vemos que los videos que tienen títulos demasiado largos tienen menos
         chance de ser exitosos, tal como nos muestran las reglas, y además vemos
         que el algoritmo identifica correctamente estos casos, teniendo un alto
         porcentaje de acierto tanto en positivos como en negativos.
 
-        \begin{figure}[ht]
-            \begin{adjustbox}{addcode={
-                \begin{minipage}{\width}}{
-                    \caption{Clasif. errors vs category}
-                \end{minipage}},rotate=360,center}
-                \includegraphics[scale=.6]{clasif_error_category.png}
-            \end{adjustbox}
-        \end{figure}
-        \FloatBarrier
+        \def\path{clasif_error_category.png}
+        \def\text{Clasif. errors vs category}
+        \input{report/image.tex}
 
         En este gráfico vemos por un lado, que los grupos de categorías 3 y 4
         tienen poca cantidad de videos exitosos, a pesar que tienen mucha
@@ -208,15 +190,9 @@ los algoritmos.
         efectivo clasificando videos pertenecientes a los grupos 0, 1 y 3, y
         no tan efectivo al clasificar los videos de grupos 2 y 4.
 
-        \begin{figure}[ht]
-            \begin{adjustbox}{addcode={
-                \begin{minipage}{\width}}{
-                    \caption{Clasif. errors vs like ratio}
-                \end{minipage}},rotate=360,center}
-                \includegraphics[scale=.6]{clasif_error_likes_ratio.png}
-            \end{adjustbox}
-        \end{figure}
-        \FloatBarrier
+        \def\path{clasif_error_likes_ratio.png}
+        \def\text{Clasif. errors vs like ratio}
+        \input{report/image.tex}
 
         Este gráfico es interesante, vemos muy claramente que los videos que
         tienen poco like ratio tienen mucha menos chance de ser exitosos, y
